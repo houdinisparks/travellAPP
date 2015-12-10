@@ -1,0 +1,94 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:id="@+id/zhenyang">
+
+    <ListView
+        android:layout_width="250dp"
+        android:layout_height="430dp"
+        android:id="@+id/lvItems3"
+
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/textView15"
+        android:layout_alignEnd="@+id/etItem3"
+        android:layout_below="@+id/etPrice3" />
+
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add Item"
+        android:id="@+id/btnAddItem3"
+        android:onClick="onAddItem3"
+        android:layout_above="@+id/lvItems3"
+        android:layout_alignEnd="@+id/etItem3"
+        android:layout_marginRight="5dp" />
+
+
+
+    <EditText
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/etItem3"
+        android:hint="Enter description of item"
+        android:layout_alignParentEnd="true"
+        android:layout_alignRight="@+id/textView13"
+        android:layout_toEndOf="@+id/textView13"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="22dp"
+        android:layout_alignParentRight="false" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="32dp"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Description: "
+        android:id="@+id/textView13"
+        android:layout_below="@+id/textView15"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="TRANSPORT"
+        android:id="@+id/textView15"
+        android:textSize="30dp"
+        android:layout_marginLeft="5dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Cost: "
+        android:id="@+id/textView17"
+        android:layout_below="@+id/textView13"
+
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="40dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:ems="10"
+        android:id="@+id/etPrice3"
+        android:hint="Enter price of item"
+        android:layout_below="@+id/etItem3"
+        android:layout_toEndOf="@+id/textView13" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="$"
+        android:id="@+id/textView18"
+
+        android:layout_alignTop="@+id/textView17"
+        android:layout_toStartOf="@+id/etPrice3" />
+
+</RelativeLayout>

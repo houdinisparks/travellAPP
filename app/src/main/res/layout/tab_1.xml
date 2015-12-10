@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/activity_horizontal_margin">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/linear1">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight=".50"
+            android:gravity="center"
+            android:text="Travel Budget ($)" />
+
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight=".50"
+            android:id="@+id/budget"
+            android:inputType="numberDecimal"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="50dp"
+        android:id="@+id/linear2"
+        android:layout_alignEnd="@+id/linear1">
+        <TextView
+            android:id="@+id/note"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/note"
+            android:paddingLeft="30dp"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:id="@+id/linear3"
+        android:layout_marginTop="100dp"
+        android:background="#ef5350">
+
+        <Spinner
+            android:id="@+id/spinner1"
+            android:layout_width="0dp"
+            android:layout_weight=".78"
+            android:layout_height="fill_parent"
+            android:layout_alignParentLeft="true"
+            android:popupBackground="#ffffff"
+            android:prompt="@string/spinner_header"
+             />
+
+
+        <Button
+            android:id="@+id/btnClear"
+            android:layout_width="0dp"
+            android:layout_weight=".22"
+            android:layout_height="fill_parent"
+            android:text="@string/lblBtnClear"
+            android:layout_toRightOf="@id/spinner1" />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="160dp"
+        android:layout_marginBottom="48dp"
+        android:id="@+id/relative2"
+        android:layout_alignEnd="@+id/linear3">
+        <ListView
+            android:id="@android:id/list"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            />
+
+        <TextView
+            android:id="@android:id/empty"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/txtEmpty"
+            android:gravity="center_horizontal"
+            android:layout_alignParentTop="true"
+            />
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/btnGen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Generate Route"
+        android:layout_alignParentBottom="true"
+        android:layout_alignEnd="@+id/relative2" />
+
+
+</RelativeLayout>
